@@ -1,0 +1,7 @@
+version: '2'
+ 
+services:
+    mongodb:
+      image: bitnami/mongodb:latest
+      volumes:
+        - ./mongo:/bitnami/mongodb

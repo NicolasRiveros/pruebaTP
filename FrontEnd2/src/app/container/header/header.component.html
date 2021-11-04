@@ -1,0 +1,33 @@
+<div class="header">
+    <div class="header-container">
+        <div class="row">
+            <div class=" col-12 col-md-6" *ngIf="rolActive === 'Administrador'">
+                <div class="d-flex">
+                  <div>
+                    <nb-icon  icon="plus"></nb-icon>
+                  </div>
+                  <div>
+                    <a routerLink="create-public"  >
+                        Crear publicaciòn
+                     </a>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6" *ngIf="rolActive === 'Viewer'">
+                <nb-icon  icon="eye"></nb-icon>
+                <a routerLink="muro-publicaciones">
+                    Ver Muro 
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header-container">
+        <nb-actions size="small">
+            <nb-action class="user-action">
+                <nb-user  [nbContextMenu]="profileMenu"
+                    nbContextMenuTag="menu-action">
+                </nb-user>
+            </nb-action>
+        </nb-actions>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div>
+    <form [formGroup]="form">
+        <nb-card >
+            <nb-card-body>
+                <div>
+                    <label>Ingresa el texto de la publicaciòn que vas a realizar:</label>
+                </div>
+                <div style="width: auto; margin-top: 1%;">
+                    <textarea type="text" fullWidth  placeholder="Texto..." nbInput formControlName="text" [(ngModel)]="publicacion.texto"></textarea>
+                </div>
+            </nb-card-body>
+            <nb-card-footer>
+                <div class="d-flex">
+                    <div class="col-6">
+                        <button nbButton status="danger" [disabled]="form.invalid" (click)="cancel()">Cancelar</button>
+                    </div>
+                     <div class="col-6">
+                        <button nbButton status="primary" [disabled]="form.invalid">Guardar</button>
+                     </div>
+                     
+                </div>
+            </nb-card-footer>
+        </nb-card>
+    </form>
+    
+</div>
